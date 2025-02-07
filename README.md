@@ -3,7 +3,7 @@
 
 ### Local Development Setup
 1. Clone this repo: `git clone https://github.com/kinga112/jobtarget-api-project`
-2. Navigate to the local install directory and install the required python packages: `pip install requirements.txt`
+2. Navigate to the local install directory and install the required python packages: `pip install -r requirements.txt`
     - *recommended*: Create a virtual environment using venv with Python 3.12.6
 3. Run the API server using FastAPI in command prompt: `fastapi dev api.py`
 4. In another cmd window, navigate to the `vue-app` directory and install the required npm packages: `npm install`
