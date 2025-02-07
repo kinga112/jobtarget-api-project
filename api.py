@@ -1,14 +1,12 @@
-from typing import Union
 from fastapi import FastAPI
-import json
 from fastapi.middleware.cors import CORSMiddleware
-
+import json
 
 api = FastAPI()
 
 api.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173"], # Vue FrontEnd
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,7 +23,6 @@ def jobs():
 
 @api.get("/job/{job_id}")
 def details(job_id: int):
-    print("GETTING JOB: ", job_id)
     for job in jobs_json:
         if job["id"] == job_id:
             return json.dumps(job)
